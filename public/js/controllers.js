@@ -12,10 +12,14 @@ function AppCtrl($scope, $http) {
   });
 }
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+// function MyCtrl1() {}
+// MyCtrl1.$inject = [];
 
+// function MyCtrl2() {
+// }
+// MyCtrl2.$inject = [];
 
-function MyCtrl2() {
-}
-MyCtrl2.$inject = [];
+function aboutCtrl() {}
+function projectsCtrl() {}
+function contactCtrl() {}
+function resumeCtrl() {}
