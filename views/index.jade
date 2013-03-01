@@ -3,13 +3,12 @@ extends layout
 block body
   div(ng-controller='AppCtrl')
     div#main-container
-      div#main-graphic
+      div(ng-class="{'main-bot': scroll <= 450, 'main-top': scroll > 450}")#main-graphic
         img#index-logo.index-graphic(src='/images/logo.png')
-        img(when-scrolled)#index-icon.index-graphic(src='/images/icon.png')
+        img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
 
       div#main-intro
         p.intro-name {{name}}
-        span.scroll-debug {{scroll}}
         div.intro-desc
           div.intro-role-containers
             p.intro-desc developer

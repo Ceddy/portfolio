@@ -3,6 +3,7 @@
 /* Controllers */
 
 function AppCtrl($scope, $http) {
+	// http request to fetch name
 	$http({method: 'GET', url: '/api/name'}).
   	success(function(data, status, headers, config) {
     	$scope.name = data.name;
@@ -10,6 +11,9 @@ function AppCtrl($scope, $http) {
   	error(function(data, status, headers, config) {
     	$scope.name = 'Error!'
   	});
+
+  	// set up the scroll position
+  	$scope.scroll = 0;
 }
 
 // function MyCtrl1() {}
@@ -19,7 +23,18 @@ function AppCtrl($scope, $http) {
 // }
 // MyCtrl2.$inject = [];
 
-function aboutCtrl() {}
-function projectsCtrl() {}
-function contactCtrl() {}
-function resumeCtrl() {}
+function aboutCtrl($event) {
+	$event.preventDefault();
+}
+
+function projectsCtrl($event) {
+	$event.preventDefault();
+}
+
+function contactCtrl($event) {
+	$event.preventDefault();
+}
+
+function resumeCtrl($event) {
+	$event.preventDefault();
+}

@@ -15,7 +15,7 @@ a {
 #main-container {
   text-align: center;
   min-width: 600px;
-  /*height: 1200px;*/
+  height: 850px;
   margin-top: 100px;
 }
 
@@ -23,6 +23,14 @@ a {
 #main-graphic {
   height: 500px;
   opacity: 0.77;
+}
+
+#main-graphic.main-bot {
+  opacity: 1;
+}
+
+#main-graphic.main-top {
+  opacity: 0;
 }
 
 #main-intro,
@@ -58,7 +66,7 @@ a {
 }
 
 .intro-role-containers {
-  height: 200px;
+  /*height: 200px;*/
   width: 150px;
   display: inline-block;
 }
@@ -77,3 +85,5 @@ a {
 .menu > li:nth-child(1) {
   margin: 0;
 }
+
+/* about page */
