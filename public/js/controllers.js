@@ -14,6 +14,11 @@ function AppCtrl($scope, $http) {
 
   	// set up the scroll position
   	$scope.scroll = 0;
+
+  	// Analytics code
+  	$scope.$on('$viewContentLoaded', function(event) {
+  		$window._gaq.push(['_trackPageview', $location.path()]);
+  	})
 }
 
 // function MyCtrl1() {}
