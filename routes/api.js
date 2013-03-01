@@ -3,7 +3,7 @@
  */
 
 exports.name = function (req, res) {
-  res.json({
-  	name: 'BUSHI ZHANG'
-  });
+	res.json({
+ 		name: 'BUSHI ZHANG'
+  	});
 };

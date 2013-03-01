@@ -5,10 +5,11 @@ block body
     div#main-container
       div#main-graphic
         img#index-logo.index-graphic(src='/images/logo.png')
-        img#index-icon.index-graphic(src='/images/icon.png')
+        img(when-scrolled)#index-icon.index-graphic(src='/images/icon.png')
 
       div#main-intro
         p.intro-name {{name}}
+        span.scroll-debug {{scroll}}
         div.intro-desc
           div.intro-role-containers
             p.intro-desc developer
@@ -29,6 +30,7 @@ block body
       div#main-content(ng-view)
 
   script(src='js/lib/angular/angular.js')
+  script(src='js/lib/angularUI/angular-ui.js')
   script(src='js/app.js')
   script(src='js/services.js')
   script(src='js/controllers.js')
