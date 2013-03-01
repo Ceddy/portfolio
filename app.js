@@ -4,7 +4,6 @@
  */
 
 var express = require('express'),
-    $ = require('jquery');
     routes = require('./routes'),
     api = require('./routes/api');
 
