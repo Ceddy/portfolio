@@ -15,13 +15,13 @@ a {
 #main-container {
   text-align: center;
   min-width: 600px;
-  /*height: 1100px;*/
+  height: 1200px;
   margin-top: 100px;
 }
 
 /* index graphics */
 #main-graphic {
-  height: 390px;
+  height: 500px;
   opacity: 0.77;
 }
 
@@ -29,14 +29,15 @@ a {
   width: 300px;
 }
 
-#index-logo
-{
+#index-logo {
   position: absolute;
+  margin-left: -150px;
 }
 
 #index-icon {
-  margin: 40px 0 0 10px;
+  margin: 40px 0 0 -140px;
   width: 280px;
+  position: fixed;
 }
 
 .intro-name {
