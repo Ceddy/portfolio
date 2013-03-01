@@ -37,6 +37,7 @@ a {
 #index-icon {
   margin: 40px 0 0 -140px;
   width: 280px;
+  z-index: -1;
   position: fixed;
 }
 
