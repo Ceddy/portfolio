@@ -25,6 +25,13 @@ a {
   opacity: 0.77;
 }
 
+#main-intro,
+#main-navigation,
+#main-content {
+  z-index: 2;
+  position: relative;
+}
+
 .index-graphic {
   width: 300px;
 }
