@@ -25,14 +25,6 @@ a {
   opacity: 0.77;
 }
 
-#main-graphic.main-bot {
-  opacity: 1;
-}
-
-#main-graphic.main-top {
-  opacity: 0;
-}
-
 #main-intro,
 #main-navigation,
 #main-content {
