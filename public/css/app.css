@@ -1,5 +1,4 @@
 /* app css stylesheet */
-
 /* Better Helvetica: http://css-tricks.com/snippets/css/better-helvetica/ */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -7,27 +6,55 @@ body {
   color: #454545;
 }
 
+a {
+  color: #454545;
+  text-decoration: none;
+}
+
+/* index page */
 #main-container {
   text-align: center;
   min-width: 600px;
-  margin-top: 50px;
+  /*height: 1100px;*/
+  margin-top: 100px;
 }
 
-#main-intro {
+/* index graphics */
+#main-graphic {
+  height: 390px;
+  opacity: 0.77;
+}
+
+.index-graphic {
+  width: 300px;
+}
+
+#index-logo
+{
+  position: absolute;
+}
+
+#index-icon {
+  margin: 40px 0 0 10px;
+  width: 280px;
 }
 
 .intro-name {
   font-size: 40px;
+  margin-bottom: 0;
 }
 
 .intro-desc {
   font-size: 20px;
 }
 
-#index-logo {
-  width: 400px;
+.intro-role-containers {
+  height: 200px;
+  width: 150px;
+  display: inline-block;
 }
 
+/* navigation */
 .menu {
   list-style: none;
   padding: 0;

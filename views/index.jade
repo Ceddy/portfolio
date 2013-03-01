@@ -3,22 +3,29 @@ extends layout
 block body
   div(ng-controller='AppCtrl')
     div#main-container
-      img#index-logo(src='/images/logo_2.png')
+      div#main-graphic
+        img#index-logo.index-graphic(src='/images/logo.png')
+        img#index-icon.index-graphic(src='/images/icon.png')
 
       div#main-intro
         p.intro-name {{name}}
-        p.intro-desc Developer + Designer
-  
+        div.intro-desc
+          div.intro-role-containers
+            p.intro-desc developer
+          +
+          div.intro-role-containers
+            p.intro-desc designer
+
       div#main-navigation
         ul.menu
           li
-            a(href='about') about
+            a.nav-link(href='about') about
           li
-            a(href='projects') projects
+            a.nav-link(href='projects') projects
           li
-            a(href='contact') contact
+            a.nav-link(href='contact') contact
           li
-            a(href='resume') resume
+            a.nav-link(href='resume') resume
       div(ng-view)
 
   script(src='js/lib/angular/angular.js')
