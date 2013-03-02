@@ -14,29 +14,41 @@ angular.module('myApp.directives', []).
 	directive('iconScrolled', function($window) {
 		return function(scope, element, attrs) {
 			var icon = $('#index-icon');
+			var logo = $('#index-logo');
 			var menu = $('#main-navigation');
 			var windowElement = angular.element($window);
 			windowElement.on('scroll', function() {
 				var scrollTop = windowElement.scrollTop();
 				
-				// store scroll
-				scope['scroll'] = scrollTop;
-				
-
 				// icon opacity
 				icon.css('opacity', (350 - scrollTop) / 350);
+				// logo: opacity from 1 to 0, 180 to 475
+				logo.css('opacity', (475 - scrollTop) / 295);
+
+				console.log(scrollTop);
+	
+				// match scroll position to bounding rectangle top to fade in and out
+
 
 				// POINT OF NO RETURN!!!
-				if (scrollTop >= 510) {
+				if (scrollTop >= 350 && icon.css('opacity') == 0) {
 					menu.css('visibility', 'visible');
+					menu.css('opacity', (scrollTop - 305) / 150);
 				}
 			})
 		}
 	}).
 	directive('hiddenHome', function() {
 		return function(scope, element, attrs) {
-			var page = scope.page;
 			var menu = $('#main-navigation');
 			menu.css('visibility', 'hidden');
+			// menu.css('opacity', 0.3);
+		}
+	}).
+	directive('resetContent', function() {
+		return function(scope, element, attrs) {
+			var menu = $('#main-navigation');
+			menu.css('visibility', 'visible');
+			menu.css('opacity', 1.0);
 		}
 	});

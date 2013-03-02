@@ -21,13 +21,6 @@ a {
   min-width: 700px;
 }
 
-/* index graphics */
-#main-graphic {
-  margin-top: 75px;
-  height: 900px;
-  opacity: 0.77;
-}
-
 #main-intro {
   z-index: 2;
   position: relative;
@@ -78,11 +71,11 @@ a {
 
 #index-logo {
   position: absolute;
-  margin-left: -150px;
+  margin-left: -144px;
 }
 
 #index-icon {
-  margin: 40px 0 0 -140px;
+  margin: 40px 0 0 -134px;
   width: 280px;
   z-index: -1;
   position: fixed;
@@ -93,6 +86,28 @@ a {
   height: 600px;
 }
 
+/* home page */
+#home-container {
+  padding-bottom: 50px;
+  height: 2500px;
+}
+
+#home-graphic {
+  margin-top: 75px;
+  height: 700px;
+  opacity: 0.77;
+}
+
+#home-info {
+  height: 200px;
+  font-size: 50px;
+}
+
+#home-info p {
+  padding: 20px;
+  opacity: 0.3;
+}
+
 /* about page */
 .intro-name {
   font-size: 40px;
@@ -101,4 +116,19 @@ a {
 
 .intro-desc {
   font-size: 20px;
+}
+
+/* fade functionality */
+.fade {
+  opacity: 0.3;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.9;
+  transition: opacity .30s ease-in-out;
+  -moz-transition: opacity .30s ease-in-out;
+  -webkit-transition: opacity .30s ease-in-out;
 }

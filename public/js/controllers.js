@@ -12,8 +12,6 @@ function AppCtrl($scope, $http) {
     	$scope.name = 'Error!'
   	});
 
-  	// set up the scroll position
-  	$scope.scroll = 0;
     $scope.page = null;
 }
 
