@@ -14,31 +14,24 @@ function AppCtrl($scope, $http) {
 
   	// set up the scroll position
   	$scope.scroll = 0;
+  	$scope.holder = null;
+  	$scope.locked = false;
 }
 
 // function MyCtrl1() {}
 // MyCtrl1.$inject = [];
 
-// function MyCtrl2() {
-// }
+// function MyCtrl2() {}
 // MyCtrl2.$inject = [];
 
 function aboutCtrl($location, $anchorScroll) {
-	$location.hash('main-navigation');
-	$anchorScroll();
 }
 
 function projectsCtrl($location, $anchorScroll) {
-	$location.hash('main-navigation');
-	$anchorScroll();
 }
 
 function contactCtrl($location, $anchorScroll) {	
-	$location.hash('main-navigation');
-	$anchorScroll();
 }
 
 function resumeCtrl($location, $anchorScroll) {
-	$location.hash('main-navigation');
-	$anchorScroll();
 }

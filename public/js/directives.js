@@ -9,17 +9,16 @@ angular.module('myApp.directives', []).
     	};
   	}]);
 
-angular.module('myApp.directives', []).value('$anchorScroll', angular.noop)
-
 // icon disappear on window position 320
 angular.module('myApp.directives', []).
 	directive('iconScrolled', function($window) {
 		return function(scope, element, attrs) {
-			var icon = element[0];
+			var icon = $('#index-icon');
+			var menu = $('#main-navigation');
+
 			var windowElement = angular.element($window);
-			windowElement.bind('scroll', function() {
-				var scrollTop = windowElement[0].scrollY;
-				var scrollTarget = document.getElementById('main-navigation');
+			windowElement.on('scroll', function() {
+				var scrollTop = windowElement.scrollTop();
 				
 				// icon opacity
 				scope.$apply(function() {
@@ -27,7 +26,19 @@ angular.module('myApp.directives', []).
 					scope['scroll'] = scrollTop;
 
 					// icon opacity
-					icon.style['opacity'] = (350 - scrollTop) / 350;
+					icon.css('opacity', (350 - scrollTop) / 350);
+
+					if (!scope.locked) {
+						if (scrollTop >= 450 && scrollTop <= 500) {
+							menu.removeClass('nav-hide');
+						} else if (scrollTop < 450) {
+							menu.addClass('nav-hide');
+						}
+
+						menu.css('opacity', (scrollTop - 500) / 150);
+					}
+
+					// (ng-class="{'nav-hide': scroll <= 650, 'nav-show': scroll > 650}") 
 				});
 			})
 		}
@@ -36,6 +47,25 @@ angular.module('myApp.directives', []).
 		return function(scope, element, attrs) {
 			$(element).click(function(event) {
 				event.preventDefault();
+
+				if (!scope.locked) {
+					scope.holder = $('#main-graphic');
+					scope.locked = true;
+					$('#main-graphic').remove();
+				}
+			});
+		}
+	}).
+	directive('pooClick', function() {
+		return function(scope, element, attrs) {
+			$(element).click(function(event) {
+				event.preventDefault();
+
+				// add that graphic back! and clear the holder
+				$('#main-navigation').before(scope.holder);
+				$('#main-navigation').addClass('nav-hide');
+				scope.holder = null;
+				scope.locked = false;
 			});
 		}
 	}); 
