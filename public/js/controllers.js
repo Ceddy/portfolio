@@ -15,7 +15,6 @@ function AppCtrl($scope, $http) {
   	// set up the scroll position
   	$scope.scroll = 0;
   	$scope.holder = null;
-  	$scope.locked = false;
 }
 
 // function MyCtrl1() {}
@@ -24,14 +23,14 @@ function AppCtrl($scope, $http) {
 // function MyCtrl2() {}
 // MyCtrl2.$inject = [];
 
-function aboutCtrl($location, $anchorScroll) {
+function aboutCtrl() {
 }
 
-function projectsCtrl($location, $anchorScroll) {
+function projectsCtrl() {
 }
 
-function contactCtrl($location, $anchorScroll) {	
+function contactCtrl() {	
 }
 
-function resumeCtrl($location, $anchorScroll) {
+function resumeCtrl() {
 }

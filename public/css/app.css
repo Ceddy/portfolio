@@ -18,13 +18,14 @@ a {
 /* index page */
 #main-container {
   text-align: center;
-  min-width: 600px;
+  min-width: 700px;
+  min-height: 700px;
 }
 
 /* index graphics */
 #main-graphic {
   margin-top: 150px;
-  height: 500px;
+  height: 300px;
   opacity: 0.77;
 }
 
@@ -36,11 +37,12 @@ a {
 #main-navigation {
   z-index: 2;
   height: 85px;
+  padding-bottom: 18px;
   position: relative;
 }
 
 #main-content {
-  height: 645px;
+  height: 100px;
   z-index: 2;
   position: relative;
 }
