@@ -14,11 +14,6 @@ function AppCtrl($scope, $http) {
 
   	// set up the scroll position
   	$scope.scroll = 0;
-
-  	// Analytics code
-  	$scope.$on('$viewContentLoaded', function(event) {
-  		$window._gaq.push(['_trackPageview', $location.path()]);
-  	})
 }
 
 // function MyCtrl1() {}
@@ -28,18 +23,22 @@ function AppCtrl($scope, $http) {
 // }
 // MyCtrl2.$inject = [];
 
-function aboutCtrl($event) {
-	$event.preventDefault();
+function aboutCtrl($location, $anchorScroll) {
+	$location.hash('main-navigation');
+	$anchorScroll();
 }
 
-function projectsCtrl($event) {
-	$event.preventDefault();
+function projectsCtrl($location, $anchorScroll) {
+	$location.hash('main-navigation');
+	$anchorScroll();
 }
 
-function contactCtrl($event) {
-	$event.preventDefault();
+function contactCtrl($location, $anchorScroll) {	
+	$location.hash('main-navigation');
+	$anchorScroll();
 }
 
-function resumeCtrl($event) {
-	$event.preventDefault();
+function resumeCtrl($location, $anchorScroll) {
+	$location.hash('main-navigation');
+	$anchorScroll();
 }

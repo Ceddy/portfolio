@@ -48,21 +48,6 @@ a {
   position: fixed;
 }
 
-.intro-name {
-  font-size: 40px;
-  margin-bottom: 0;
-}
-
-.intro-desc {
-  font-size: 20px;
-}
-
-.intro-role-containers {
-  height: 200px;
-  width: 150px;
-  display: inline-block;
-}
-
 /* navigation */
 .menu {
   list-style: none;
@@ -78,4 +63,17 @@ a {
   margin: 0;
 }
 
+/* content containers */
+.content-container {
+  height: 600px;
+}
+
 /* about page */
+.intro-name {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.intro-desc {
+  font-size: 20px;
+}

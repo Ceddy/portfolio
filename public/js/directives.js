@@ -9,6 +9,8 @@ angular.module('myApp.directives', []).
     	};
   	}]);
 
+angular.module('myApp.directives', []).value('$anchorScroll', angular.noop)
+
 // icon disappear on window position 320
 angular.module('myApp.directives', []).
 	directive('iconScrolled', function($window) {
@@ -29,4 +31,13 @@ angular.module('myApp.directives', []).
 				});
 			})
 		}
+	}).
+	directive('eatClick', function() {
+		return function(scope, element, attrs) {
+			$(element).click(function(event) {
+				event.preventDefault();
+			});
+		}
 	}); 
+
+// this removes scrolling entirely... quite annoying

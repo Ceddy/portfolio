@@ -9,25 +9,23 @@ block body
 
       div#main-intro
         p.intro-name BUSHI ZHANG
+        p {{scroll}}
         div.intro-desc
-          div.intro-role-containers
-            p.intro-desc developer
-          +
-          div.intro-role-containers
-            p.intro-desc designer
+          p deverloper & designer
 
       div#main-navigation
         ul.menu
           li
-            a.nav-link(href='about') about
+            a(eat-click).nav-link(href='about') about
           li
-            a.nav-link(href='projects') projects
+            a(eat-click).nav-link(href='projects') projects
           li
-            a.nav-link(href='contact') contact
+            a(eat-click).nav-link(href='contact') contact
           li
-            a.nav-link(href='resume') resume
+            a(eat-click).nav-link(href='resume') resume
       div#main-content(ng-view)
 
+  script(src='http://code.jquery.com/jquery-latest.min.js')
   script(src='js/lib/angular/angular.js')
   script(src='js/lib/angularUI/angular-ui.js')
   script(src='js/app.js')
