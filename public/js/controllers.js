@@ -14,7 +14,7 @@ function AppCtrl($scope, $http) {
 
   	// set up the scroll position
   	$scope.scroll = 0;
-  	$scope.holder = null;
+    $scope.page = null;
 }
 
 // function MyCtrl1() {}
@@ -22,6 +22,10 @@ function AppCtrl($scope, $http) {
 
 // function MyCtrl2() {}
 // MyCtrl2.$inject = [];
+
+function homeCtrl($scope) {
+  $scope.page = 'home';
+}
 
 function aboutCtrl() {
 }

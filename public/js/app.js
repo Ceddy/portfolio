@@ -4,6 +4,10 @@
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
+        when('/home', {
+            templateUrl: 'partials/home',
+            controller: homeCtrl
+        }).
     	when('/about', {
     		templateUrl: 'partials/about', 
     		controller: aboutCtrl
@@ -20,6 +24,6 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     		templateUrl: 'partials/resume', 
     		controller: resumeCtrl
     	}).
-    	otherwise({redirectTo: '/'});
+    	otherwise({redirectTo: '/home'});
     $locationProvider.html5Mode(true);
   }]);

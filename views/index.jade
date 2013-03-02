@@ -6,22 +6,17 @@ block body
       div#main-navigation
         ul.menu
           li
-            a.nav-link(href='about', eat-click) about
+            a.nav-link(href='about') about
           li
-            a.nav-link(href='projects', eat-click) projects
+            a.nav-link(href='projects') projects
           li
-            a#nav-home.nav-link(href='/', poo-click)
+            a#nav-home.nav-link(href='home')
               img(src='/images/logo-small.png')
           li
-            a.nav-link(href='contact', eat-click) contact
+            a.nav-link(href='contact') contact
           li
-            a.nav-link(href='resume', eat-click) resume
+            a.nav-link(href='resume') resume
 
-      div#main-graphic
-        img#index-logo.index-graphic(src='/images/logo.png')
-        img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
-      
-      p {{scroll}}
       div#main-content(ng-view)
 
   script(src='http://code.jquery.com/jquery-latest.min.js')
