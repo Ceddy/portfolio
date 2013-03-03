@@ -20,20 +20,20 @@ angular.module('myApp.directives', []).
 			windowElement.on('scroll', function() {
 				var scrollTop = windowElement.scrollTop();
 				
+				// update scroll
+				scope.$apply(function() {
+					scope['scroll'] = scrollTop;
+				});
+
 				// icon opacity
 				icon.css('opacity', (350 - scrollTop) / 350);
 				// logo: opacity from 1 to 0, 180 to 475
 				logo.css('opacity', (475 - scrollTop) / 295);
 
-				console.log(scrollTop);
-	
-				// match scroll position to bounding rectangle top to fade in and out
-
-
 				// POINT OF NO RETURN!!!
 				if (scrollTop >= 350 && icon.css('opacity') == 0) {
 					menu.css('visibility', 'visible');
-					menu.css('opacity', (scrollTop - 305) / 150);
+					menu.css('opacity', (scrollTop - 300) / 150);
 				}
 			})
 		}

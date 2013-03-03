@@ -13,6 +13,7 @@ function AppCtrl($scope, $http) {
   	});
 
     $scope.page = null;
+    $scope.scroll = 0;
 }
 
 // function MyCtrl1() {}

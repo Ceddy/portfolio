@@ -89,13 +89,21 @@ a {
 /* home page */
 #home-container {
   padding-bottom: 50px;
-  height: 2500px;
+  position: relative;
+  height: 2150px;
 }
 
 #home-graphic {
   margin-top: 75px;
-  height: 700px;
+  height: 600px;
   opacity: 0.77;
+}
+
+#home-meteor img {
+  position: absolute;
+  margin-top: -200px;
+  width: 200px;
+  right: 0;
 }
 
 #home-info {
@@ -104,8 +112,31 @@ a {
 }
 
 #home-info p {
-  padding: 20px;
-  opacity: 0.3;
+  opacity: 0;
+  margin: 0;
+  transition: opacity 1.5s ease-in-out;
+  -moz-transition: opacity 1.5s ease-in-out;
+  -webkit-transition: opacity 1.5s ease-in-out;
+}
+
+#home-info p.focused {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+#home-info p.break {
+  margin-bottom: 150px;
+}
+
+#home-info p.locked {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 250px;
+  z-index: 200;
 }
 
 /* about page */
