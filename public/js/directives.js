@@ -37,10 +37,6 @@ angular.module('myApp.directives', []).
 					menu.css('visibility', 'visible');
 					menu.css('opacity', (scrollTop - 300) / 150);
 				}
-				// meteor stuff
-				// if (scrollTop >= 500) {
-					// meteor.css({transformOrigin: '0px 3000px'}).transition({ rotate: '-20deg', y: '500px' }, 2000).transition({ opacity: 0 }, 200);
-				// }
 			})
 		}
 	}).

@@ -15,5 +15,9 @@ div#home-container(hidden-home)
 			// always curious
 			div
 				p(ng-class="{focused: scroll >= 550}") ALWAYS
-				p(ng-class="{focused: scroll >= 550}") CURIOUS 
+				p(ng-class="{focused: scroll >= 550}") CURIOUS 	
+		div(ng-class="{border: scroll >= 600}")
+			div.square1
 	// CATTICUS ICONs
+	div#home-kraken
+		img#kraken(ng-class="{'scroll-visible': scroll >= 450}", src='/images/kraken.png')
