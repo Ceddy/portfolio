@@ -3,28 +3,9 @@ extends layout
 block body
   div#body-container(ng-controller='AppCtrl')
     div#main-container
-      div#main-navigation
-        ul.menu
-          li
-            a#nav-home.nav-link.fade(href='home')
-              img(src='/images/logo-small.png')
-          li.dotcom.fade
-            a.nav-link(href='home')
-              p BUSHI
-              p ZHANG
-              p .com
-          li
-            a.nav-link.fade(href='home') home
-          li
-            a.nav-link.fade(href='about') about
-          li
-            a.nav-link.fade(href='projects') projects
-          li
-            a.nav-link.fade(href='contact') contact
-          li
-            a.nav-link.fade(href='resume') resume
+      include partials/navigation
 
-      div#main-content(ng-view)
+      div#main-view(ng-view)
 
   // script(src='http://code.jquery.com/jquery-latest.min.js')
   script(src='js/jquery-1.7.min.js')
@@ -36,6 +17,7 @@ block body
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
+  script(src='js/lib/vendor/custom.modernizr.js')
 
   script
       // google analytics

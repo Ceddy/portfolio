@@ -1,23 +1,24 @@
-div#home-container(hidden-home)
-	div#home-graphic
-		img#index-logo.index-graphic(src='/images/logo.png')
-		img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
-	div#home-info
-		div
-			// rarely still
+div#home-container.row(hidden-home)
+	div#home-content.large-7.large-centered.columns
+		div#home-graphic
+			img#index-logo.index-graphic(src='/images/logo.png')
+			img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
+		div#home-info
 			div
-				p(ng-class="{focused: scroll >= 450}") RARELY 
-				p(ng-class="{focused: scroll >= 450}") STILL
-			// never bored
-			div
-				p(ng-class="{focused: scroll >= 500}") NEVER 
-				p(ng-class="{focused: scroll >= 500}") BORED
-			// always curious
-			div
-				p(ng-class="{focused: scroll >= 550}") ALWAYS
-				p(ng-class="{focused: scroll >= 550}") CURIOUS 	
-		div(ng-class="{border: scroll >= 600}")
-			div.square1
+				// rarely still
+				div
+					p(ng-class="{focused: scroll >= 450}") RARELY 
+					p(ng-class="{focused: scroll >= 450}") STILL
+				// never bored
+				div
+					p(ng-class="{focused: scroll >= 500}") NEVER 
+					p(ng-class="{focused: scroll >= 500}") BORED
+				// always curious
+				div
+					p(ng-class="{focused: scroll >= 550}") ALWAYS
+					p(ng-class="{focused: scroll >= 550}") CURIOUS 	
+			div(ng-class="{border: scroll >= 600}")
+				div.square1
 	// CATTICUS ICONs
 	div#home-kraken
 		img#kraken(ng-class="{'scroll-visible': scroll >= 450}", src='/images/kraken.png')

@@ -4,14 +4,18 @@ html, body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
   color: #454545;
-  margin: auto;
   height: 100%;
-  width: 750px;
+  text-align: center;
+  min-width: 750px;
 }
 
 a {
   color: #454545;
   text-decoration: none;
+}
+
+a:hover {
+  color: #222;
 }
 
 .hidden {
@@ -21,48 +25,41 @@ a {
 /* height stff */
 #body-container {
   height: 100%;
+  min-width: 750px;
 }
 
 /* index page */
 #main-container {
-  text-align: center;
-  min-width: 750px;
   height: 100%;
 }
 
 /* navigation */
 #main-navigation {  
-  position: fixed;
-  height: 80px;
-  width: 100%;
-  min-width: 750px;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 300;
   background: white;
+  min-width: 750px;
 }
 
 .menu {
-  list-style: none;
-  padding: 0;
+  height: 70px;
+  margin-left: -3%;
 }
 
 .menu > li {
   display: inline-block;
-  width: 100px;
-  padding: 0 0 7px 15px;
+  vertical-align: middle;
   border-bottom: 1px solid #CCC;
+  line-height: 50px;
+  margin-bottom: 15px;
+  padding: 0 20px;
 }
 
 .menu > li a {
   font-size: 18px;
-  padding: 7px;
 }
 
 .menu > li.dotcom {
   margin: -1px 0 0 -25px;
-  position: absolute;
   text-align: left;
   border: none;
   letter-spacing: 2px;
@@ -75,21 +72,23 @@ a {
 
 .menu > li.dotcom p {
   margin: 0;
+  line-height: 18px;
 }
 
 .menu > li.dotcom p:nth-child(3) {
   font-size: 12px;
+  line-height: 15px;
 }
 
 .menu > li:nth-child(1) {
-  padding: 0;
   border: none;
-  width: 80px;
+  width: 75px;
+  margin-top: 15px;
 }
 
 .menu > li:nth-child(3) {
-  margin-left: 32px;
-  padding: 0 0 7px 55px;
+  margin-left: -35px;
+  padding-left: 55px;
 }
 
 #nav-home img {
@@ -98,58 +97,57 @@ a {
 }
 
 /* main content */
-#main-content {
+#main-view {
   padding-top: 120px;
   height: 100%;
 }
 
-.index-graphic {
+#index-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
   width: 300px;
 }
 
-#index-logo {
-  position: absolute;
-  margin-left: -144px;
-}
-
 #index-icon {
-  margin: 40px 0 0 -134px;
+  position: fixed;
+  margin-top: 40px;
+  left: 50%;
+  margin-left: -140px;
   width: 280px;
   z-index: -1;
-  position: fixed;
 }
 
 /* content containers */
 .content-container {
-  height: 600px;
+  height: 100%;
 }
 
 /* home page */
 #home-container {
-  height: 100%;
+  height: 120%;
   width: 100%;
 }
 
+#home-content {
+  height: 100%;
+  min-height: 1050px;
+}
+
 #home-graphic {
-  margin-top: 75px;
-  height: 600px;
+  margin-top: 20%;
+  height: 50%;
+  min-height: 600px;
   opacity: 0.77;
 }
 
-#home-meteor img {
-  position: absolute;
-  margin-top: -200px;
-  width: 200px;
-  right: 0;
-}
-
 #home-info {
-  height: 50%;
-  margin: auto;
-  width: 500px;
-  font-size: 50px;
-  z-index: 200;
   position: relative;
+  margin: auto;
+  z-index: 200;
+  height: 70%;
+  min-height: 450px;
+  font-size: 50px;
 }
 
 #home-info p {
@@ -204,13 +202,13 @@ a {
   left: 0;
   right: 0;
   width: 100%;
-  min-width: 750px;
   height: 245px;
   background: #454545;
 }
 
 #kraken {
   width: 750px;
+  margin: auto;
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
