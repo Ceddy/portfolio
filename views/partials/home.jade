@@ -1,5 +1,5 @@
 div#home-container.row(hidden-home)
-	div#home-content.large-7.large-centered.columns
+	div#home-content.small-12.large-7.large-centered.column
 		div#home-graphic
 			img#index-logo.index-graphic(src='/images/logo.png')
 			img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
@@ -20,5 +20,5 @@ div#home-container.row(hidden-home)
 			div(ng-class="{border: scroll >= 600}")
 				div.square1
 	// CATTICUS ICONs
-	div#home-kraken
+	div#home-kraken.small-12.large-12.column
 		img#kraken(ng-class="{'scroll-visible': scroll >= 450}", src='/images/kraken.png')

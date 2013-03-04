@@ -6,7 +6,6 @@ html, body {
   color: #454545;
   height: 100%;
   text-align: center;
-  min-width: 750px;
 }
 
 a {
@@ -25,7 +24,6 @@ a:hover {
 /* height stff */
 #body-container {
   height: 100%;
-  min-width: 750px;
 }
 
 /* index page */
@@ -125,8 +123,7 @@ a:hover {
 
 /* home page */
 #home-container {
-  height: 120%;
-  width: 100%;
+  height: 100%;
 }
 
 #home-content {
@@ -135,8 +132,8 @@ a:hover {
 }
 
 #home-graphic {
-  margin-top: 20%;
-  height: 50%;
+  margin-top: 40%;
+  height: 55%;
   min-height: 600px;
   opacity: 0.77;
 }
@@ -145,7 +142,7 @@ a:hover {
   position: relative;
   margin: auto;
   z-index: 200;
-  height: 70%;
+  height: 20%;
   min-height: 450px;
   font-size: 50px;
 }
@@ -201,15 +198,15 @@ a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 245px;
+  height: 30%;
+  min-height: 180px;
   background: #454545;
 }
 
 #kraken {
-  width: 750px;
   margin: auto;
   opacity: 0;
+  width: 550px;
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
