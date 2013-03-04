@@ -11,6 +11,7 @@ var app = module.exports = express();
 
 // Configuration
 app.configure(function(){
+    app.set('title', 'Bushi Zhang');
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
     app.set('view options', {

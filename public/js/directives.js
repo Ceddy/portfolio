@@ -16,6 +16,7 @@ angular.module('myApp.directives', []).
 			var icon = $('#index-icon');
 			var logo = $('#index-logo');
 			var menu = $('#main-navigation');
+			var meteor = $('#meteor');
 			var windowElement = angular.element($window);
 			windowElement.on('scroll', function() {
 				var scrollTop = windowElement.scrollTop();
@@ -25,6 +26,7 @@ angular.module('myApp.directives', []).
 					scope['scroll'] = scrollTop;
 				});
 
+				// opacity stuff
 				// icon opacity
 				icon.css('opacity', (350 - scrollTop) / 350);
 				// logo: opacity from 1 to 0, 180 to 475
@@ -35,6 +37,10 @@ angular.module('myApp.directives', []).
 					menu.css('visibility', 'visible');
 					menu.css('opacity', (scrollTop - 300) / 150);
 				}
+				// meteor stuff
+				// if (scrollTop >= 500) {
+					// meteor.css({transformOrigin: '0px 3000px'}).transition({ rotate: '-20deg', y: '500px' }, 2000).transition({ opacity: 0 }, 200);
+				// }
 			})
 		}
 	}).
@@ -42,7 +48,6 @@ angular.module('myApp.directives', []).
 		return function(scope, element, attrs) {
 			var menu = $('#main-navigation');
 			menu.css('visibility', 'hidden');
-			// menu.css('opacity', 0.3);
 		}
 	}).
 	directive('resetContent', function() {
