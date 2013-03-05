@@ -1,5 +1,64 @@
 div#about-container.content-container(reset-content)
-	p.intro-name BUSHI ZHANG
-	div.intro-desc
-		p deverloper & designer
-		p check back tuesday for the update.
+	// image, title, exp
+	div#about-header.row
+		div.large-8.large-centered.columns
+			// profile pic
+			div.row
+				div.large-3.large-offset-1.columns
+					img#about-profile-pic(src='/images/profile.png')
+				// header
+				div#about-exp-name.large-8.columns
+					p#about-name BUSHI ZHANG
+					p.about-header tyrant wizard-barbarian
+					div.about-dashed.row
+						div.large-1.columns
+							p.about-header EXP
+						div.large-6.columns
+							img#about-exp-bar(src='/images/exp-bar.png')
+						div.large-1.large-offset-2.columns
+							p LVL.
+						div.large-2.columns
+							p.about-level 15
+	// powered by, tracks, description
+	div#about-info.row
+		div.large-8.large-centered.columns
+			div.row
+				// cool info
+				div.large-3.large-offset-1.columns
+					// powered by
+					div.row
+						div.
+						p.about-header [powered by]
+					// the track
+					div.row
+						p.about-header [the track]
+				// bio
+				div.large-8.columns
+					// roles
+					div#about-roles
+						div.row
+							div.large-5.columns
+								img.about-role-img(src='/images/gear.png')
+								p.about-role-p developer
+							div.large-7.columns
+								img.about-role-img(src='images/pencil.png')
+								p.about-role-p designer
+					// bio
+					div#about-bio
+						p.about-header [bio]
+						p 
+							| Bushi is in his final term at the University of 
+							| Waterloo. He currently works at Toronto startup 
+							| BluTrumpet, where he helps design features 
+							| for bt ad-servers.
+						p
+							| When he was 10, his best friend gave him a 
+							| drawing of Blastoise and that’s when he fell in
+							| love with art. However, his proficiency with a
+							| pencil is only matched by his incompentency 
+							| with his tablet - trapping him in a dark and scary
+							| place. 
+						p
+							| In his spare time he is busy with giving up on 
+							| Arsenal FC, passive aggresively messing with 
+							| his roommate, and hacking on cool stuff.
