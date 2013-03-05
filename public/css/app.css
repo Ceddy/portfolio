@@ -23,6 +23,10 @@ a:hover {
   color: #222;
 }
 
+.nm {
+  margin: 0;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -259,8 +263,49 @@ a:hover {
   text-align: justify;
 }
 
+#about-bio p:nth-child(1) {
+  margin: -10px 0 10px;
+}
+
 #about-roles {
   margin-bottom: 20px;
+}
+
+#about-powered-by img {
+  margin: auto;
+}
+
+#about-power-container {
+  height: 77px;
+  margin-top: 10px;
+}
+
+#about-powered-by img.tbolt {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#about-powered-by img.raptor {
+  width: 70px;
+  margin-left: -10px;
+}
+
+#about-powered-by img.gundam {
+  width: 53px;
+}
+
+#about-powered-by img.reddit {
+  width: 31px;
+  margin-left: 12px;
+}
+
+#about-powered-by img.record {
+  height: 40px;
+  margin: 10px auto;
+}
+
+#about-records {
+  height: 70px;
 }
 
 .about-header {
@@ -274,7 +319,7 @@ a:hover {
 }
 
 .row .about-dashed {
-  border-image:url("/images/dashed-border.png") 0% 0% 100% 9% repeat;
+  border-image:url("/images/dashed-border.png") 0% 0% 100% 30% repeat;
   margin-bottom: 13px;
 }
 
@@ -286,6 +331,10 @@ a:hover {
 .about-role-p {
   font-size: 25px;
   margin: 0;
+}
+
+.about-power-img {
+  float: left;
 }
 
 /* fade functionality */

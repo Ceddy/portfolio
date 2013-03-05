@@ -4,7 +4,7 @@ div#about-container.content-container(reset-content)
 		div.large-8.large-centered.columns
 			// profile pic
 			div.row
-				div.large-3.large-offset-1.columns
+				div.large-3.columns
 					img#about-profile-pic(src='/images/profile.png')
 				// header
 				div#about-exp-name.large-8.columns
@@ -24,14 +24,22 @@ div#about-container.content-container(reset-content)
 		div.large-8.large-centered.columns
 			div.row
 				// cool info
-				div.large-3.large-offset-1.columns
+				div#about-powered-by.large-3.columns
 					// powered by
 					div.row
-						div.
-						p.about-header [powered by]
+						img.tbolt(src='/images/tbolt.png')
+						p.about-header.nm [powered by]
+						div#about-power-container.about-dashed
+							img.raptor.about-power-img(src='/images/raptors.png')
+							img.gundam.about-power-img(src='/images/gundam.png')
+							img.reddit.about-power-img(src='/images/reddit.png')
 					// the track
 					div.row
-						p.about-header [the track]
+						img.record(src='/images/record.png')
+						p.about-header.nm [listening to]
+						div#about-records.about-dashed
+							p.nm ceremonials - f&tm
+							p.nm paradise - LDR
 				// bio
 				div.large-8.columns
 					// roles
