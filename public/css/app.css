@@ -7,16 +7,20 @@
 /* app css stylesheet */
 /* Better Helvetica: http://css-tricks.com/snippets/css/better-helvetica/ */
 html, body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
-  color: #454545;
   height: 100%;
-  text-align: center;
+  color: #454545;
+  text-align: center; 
+  font-weight: 300;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-a {
+a,
+a:focus, 
+a:hover,
+a:active {
   color: #454545;
   text-decoration: none;
+  outline: none;
 }
 
 a:hover {
@@ -48,22 +52,22 @@ a:hover {
 /* navigation */
 #main-navigation {  
   z-index: 300;
-  background: white;
   min-width: 750px;
+  background: white;
 }
 
 .menu {
-  height: 70px;
   margin-left: -3%;
+  height: 70px;
 }
 
 .menu > li {
   display: inline-block;
-  vertical-align: middle;
-  border-bottom: 1px solid #CCC;
-  line-height: 50px;
   margin-bottom: 15px;
   padding: 0 20px;
+  border-bottom: 1px solid #CCC;
+  vertical-align: middle;
+  line-height: 50px;
 }
 
 .menu > li a {
@@ -72,8 +76,8 @@ a:hover {
 
 .menu > li.dotcom {
   margin: -1px 0 0 -25px;
-  text-align: left;
   border: none;
+  text-align: left;
   letter-spacing: 2px;
 }
 
@@ -93,9 +97,9 @@ a:hover {
 }
 
 .menu > li:nth-child(1) {
-  border: none;
-  width: 75px;
   margin-top: 15px;
+  width: 75px;
+  border: none;
 }
 
 .menu > li:nth-child(3) {
@@ -104,8 +108,8 @@ a:hover {
 }
 
 #nav-home img {
-  vertical-align: middle;
   width: 40px;
+  vertical-align: middle;
 }
 
 /* main content */
@@ -123,11 +127,11 @@ a:hover {
 
 #index-icon {
   position: fixed;
-  margin-top: 40px;
   left: 50%;
+  z-index: -1;
+  margin-top: 40px;
   margin-left: -140px;
   width: 280px;
-  z-index: -1;
 }
 
 /* content containers */
@@ -141,46 +145,46 @@ a:hover {
 }
 
 #home-content {
-  height: 100%;
   min-height: 1050px;
+  height: 100%;
 }
 
 #home-graphic {
   margin-top: 40%;
-  height: 55%;
   min-height: 600px;
+  height: 55%;
   opacity: 0.77;
 }
 
 #home-info {
   position: relative;
-  margin: auto;
   z-index: 200;
-  height: 20%;
+  margin: auto;
   min-height: 450px;
+  height: 20%;
   font-size: 50px;
 }
 
 #home-info p {
   display: inline-block;
-  opacity: 0;
   margin: 0;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
+  opacity: 0;
   -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 #home-info .focused {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #home-info p:nth-child(odd) {
-  font-size: 30px;
-  vertical-align: middle;
   margin-right: 10px;
+  vertical-align: middle;
+  font-size: 30px;
 }
 
 #home-info p:nth-child(even) {
@@ -190,18 +194,18 @@ a:hover {
 
 #home-info > div:last-child {
   opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 #home-info > div:last-child.border {
-  opacity: 1;
   margin-top: 20px;
   border-top: 1px solid #454545;
-  transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
+  opacity: 1;
   -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #home-info div.square1 {
@@ -210,27 +214,27 @@ a:hover {
 
 #home-kraken {
   position: absolute;
-  left: 0;
   right: 0;
-  height: 30%;
+  left: 0;
   min-height: 180px;
+  height: 30%;
   background: #454545;
 }
 
 #kraken {
   margin: auto;
-  opacity: 0;
   width: 550px;
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
+  opacity: 0;
   -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 #kraken.scroll-visible {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out;  
+  transition: opacity 0.5s ease-in-out;  
 }
 
 /* about page */
@@ -248,19 +252,19 @@ a:hover {
 }
 
 #about-profile-pic {
-  width: 125px;
   margin: auto;
+  width: 125px;
 }
 
 #about-name {
-  font-size: 40px;
-  font-weight: bold;
   margin: 0;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 #about-exp-bar {
-  height: 21px;
   margin-top: 2px;
+  height: 21px;
 }
 
 #about-bio {
@@ -280,18 +284,18 @@ a:hover {
 }
 
 #about-power-container {
-  height: 77px;
   margin-top: 10px;
+  height: 77px;
 }
 
 #about-powered-by img.tbolt {
-  height: 50px;
   margin-bottom: 10px;
+  height: 50px;
 }
 
 #about-powered-by img.raptor {
-  width: 70px;
   margin-left: -10px;
+  width: 70px;
 }
 
 #about-powered-by img.gundam {
@@ -299,13 +303,13 @@ a:hover {
 }
 
 #about-powered-by img.reddit {
-  width: 31px;
   margin-left: 12px;
+  width: 31px;
 }
 
 #about-powered-by img.record {
-  height: 40px;
   margin: 10px auto;
+  height: 40px;
 }
 
 #about-records {
@@ -323,8 +327,8 @@ a:hover {
 }
 
 .row .about-dashed {
-  border-image:url("/images/dashed-border.png") 0% 0% 100% 30% repeat;
   margin-bottom: 13px;
+  border-image:url("/images/dashed-border.png") 0% 0% 100% 30% repeat;
 }
 
 .about-role-img {
@@ -333,8 +337,8 @@ a:hover {
 }
 
 .about-role-p {
-  font-size: 25px;
   margin: 0;
+  font-size: 25px;
 }
 
 .about-power-img {
@@ -356,7 +360,7 @@ a:hover {
 
 #resume-name,
 #resume-contact-info {
-  text-align: center
+  text-align: center;
 }
 
 #resume-container p {
@@ -364,13 +368,13 @@ a:hover {
 }
 
 .resume-header {
-  text-align: center
+  text-align: center;
 }
 
 table.naked-table {
-  text-align: left;
-  border: none;
   margin: auto;
+  border: none;
+  text-align: left;
 }
 
 table.naked-table tr {
@@ -383,8 +387,8 @@ table.naked-table tr {
 
 .resume-work-container p:first-child {
   float: left;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .resume-work-container p:last-child {
@@ -392,28 +396,28 @@ table.naked-table tr {
 }
 
 .resume-skills {
-  /*color: #999;*/
+  /* color: #999; */
   font-size: 15px;
 }
 
 /* fade functionality */
 .fade {
   opacity: 0.5;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .fade:hover {
   opacity: 0.9;
-  transition: opacity .30s ease-in-out;
-  -moz-transition: opacity .30s ease-in-out;
   -webkit-transition: opacity .30s ease-in-out;
+  -moz-transition: opacity .30s ease-in-out;
+  transition: opacity .30s ease-in-out;
 }
 
 /* shapes */
 .square1 {
-  background: #454545;
-  height: 10px;
   width: 10px;
+  height: 10px;
+  background: #454545;
 }
