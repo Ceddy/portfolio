@@ -27,6 +27,10 @@ a:hover {
   margin: 0;
 }
 
+.bottom-padded-3 {
+  margin-bottom: 30px;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -335,6 +339,61 @@ a:hover {
 
 .about-power-img {
   float: left;
+}
+
+/* Resume */
+#resume-container {
+  text-align: left;
+}
+
+#resume-container span.secondary.label {
+  margin: 2px;
+}
+
+#resume-container .resume-skill-tags {
+  margin: 5px 0;
+}
+
+#resume-name,
+#resume-contact-info {
+  text-align: center
+}
+
+#resume-container p {
+  margin: 0;
+}
+
+.resume-header {
+  text-align: center
+}
+
+table.naked-table {
+  text-align: left;
+  border: none;
+  margin: auto;
+}
+
+table.naked-table tr {
+  background: none;
+}
+
+.resume-work-container {
+  height: 32px;
+}
+
+.resume-work-container p:first-child {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resume-work-container p:last-child {
+  float: right;
+}
+
+.resume-skills {
+  /*color: #999;*/
+  font-size: 15px;
 }
 
 /* fade functionality */
