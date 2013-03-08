@@ -27,6 +27,13 @@ a:hover {
   color: #222;
 }
 
+::selection {
+  background: #ffbf5a; /* Safari */
+  }
+::-moz-selection {
+  background: #ffbf5a; /* Firefox */
+}
+
 .nm {
   margin: 0;
 }
@@ -54,11 +61,22 @@ a:hover {
   z-index: 300;
   min-width: 750px;
   background: white;
+  opacity: 1.0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#main-navigation.hidden-home {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .menu {
   margin-left: -3%;
-  height: 70px;
+  height: 45px;
 }
 
 .menu > li {
@@ -150,7 +168,7 @@ a:hover {
 }
 
 #home-graphic {
-  margin-top: 20%;
+  margin-top: 15%;
   min-height: 600px;
   height: 55%;
   opacity: 0.77;

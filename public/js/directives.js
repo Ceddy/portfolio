@@ -33,23 +33,29 @@ angular.module('myApp.directives', []).
 				logo.css('opacity', (475 - scrollTop) / 295);
 
 				// POINT OF NO RETURN!!!
-				// if (scrollTop >= 350) {
-				// 	menu.css('visibility', 'visible');
-				// 	menu.css('opacity', (scrollTop - 300) / 150);
-				// }
+				if (scrollTop >= 350) {
+					// menu.css('opacity', (scrollTop - 300) / 150);
+					// add visible class
+					menu.css('visibility', 'visible');
+					menu.removeClass('hidden-home');
+				}
 			})
 		}
 	}).
 	directive('hiddenHome', function() {
 		return function(scope, element, attrs) {
-			var menu = $('#main-navigation');
+			var menu = $('#main-navigation');			
+			// add invisible class
 			menu.css('visibility', 'hidden');
+			menu.addClass('hidden-home');
 		}
 	}).
 	directive('resetContent', function() {
 		return function(scope, element, attrs) {
 			var menu = $('#main-navigation');
-			menu.css('visibility', 'visible');
-			menu.css('opacity', 1.0);
+			// menu.css('visibility', 'visible');
+			// add visible class
+			// menu.css('opacity', 1.0);
+			menu.removeClass('hidden-home');
 		}
 	});
