@@ -33,10 +33,10 @@ angular.module('myApp.directives', []).
 				logo.css('opacity', (475 - scrollTop) / 295);
 
 				// POINT OF NO RETURN!!!
-				if (scrollTop >= 350 && icon.css('opacity') == 0) {
-					menu.css('visibility', 'visible');
-					menu.css('opacity', (scrollTop - 300) / 150);
-				}
+				// if (scrollTop >= 350) {
+				// 	menu.css('visibility', 'visible');
+				// 	menu.css('opacity', (scrollTop - 300) / 150);
+				// }
 			})
 		}
 	}).
