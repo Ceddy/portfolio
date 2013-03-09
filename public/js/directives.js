@@ -14,6 +14,9 @@ angular.module('myApp.directives', []).
 	directive('iconScrolled', function($window) {
 		return function(scope, element, attrs) {
 			var icon = $('#index-icon');
+			var half = $('#eye-half');
+			var full = $('#eye-mid');
+			var line = $('#index-icon-line');
 			var logo = $('#index-logo');
 			var menu = $('#main-navigation');
 			var meteor = $('#meteor');
@@ -28,9 +31,11 @@ angular.module('myApp.directives', []).
 
 				// opacity stuff
 				// icon opacity
-				icon.css('opacity', (350 - scrollTop) / 350);
+				console.log(scrollTop);
+				icon.css('opacity', (400 - scrollTop) / 400);
+
 				// logo: opacity from 1 to 0, 180 to 475
-				logo.css('opacity', (475 - scrollTop) / 295);
+				// logo.css('opacity', (475 - scrollTop) / 295);
 
 				// POINT OF NO RETURN!!!
 				if (scrollTop >= 350) {

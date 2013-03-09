@@ -2,8 +2,14 @@ div#home-container.row(hidden-home)
 	div#home-content.small-12.large-7.large-centered.column
 		div#home-graphic
 			p scroll down, maybe
-			img#index-logo.index-graphic(src='/images/logo.png')
+			div#index-icon-line
 			img(icon-scrolled)#index-icon.index-graphic(src='/images/icon.png')
+
+			// 175 - eyeball turn half way
+			img#eye-half.eye-ball(src='images/eye-half.png', ng-class="{focused: scroll >= 175 && scroll < 550}")
+			// 350 - eyeball turn full
+			img#eye-mid.eye-ball(src='images/eye-mid.png', ng-class="{focused: scroll >= 550 && scroll <= 722}")
+			div#index-bottom
 		div#home-info
 			div
 				// rarely still
@@ -18,8 +24,9 @@ div#home-container.row(hidden-home)
 				div
 					p(ng-class="{focused: scroll >= 550}") ALWAYS
 					p(ng-class="{focused: scroll >= 550}") CURIOUS 	
-			div(ng-class="{border: scroll >= 550}")
-				div.square1
 	// CATTICUS ICONs
+	div#home-space
 	div#home-kraken.small-12.large-12.column
-		// img#kraken(ng-class="{'scroll-visible': scroll >= 450}", src='/images/kraken.png')
+		img#eye-bot(src='images/eye-mid.png', ng-class="{focused: scroll >= 726}")
+		img#eye-bot-monster(src='images/eye-bot.png', ng-class="{focused: scroll >= 726}")
+		//img#kraken(ng-class="{'scroll-visible': scroll >= 450}", src='/images/kraken.png')	
