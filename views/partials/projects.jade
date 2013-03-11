@@ -1,13 +1,11 @@
 div#projects-container.content-container(reset-content)
-	div#projects-div.row
-		div.large-12.columns
-			ul#projects-list
-				li#projects-lyriqal.project-header.fade
-					a
-						img#projects-lyriqal-logo(src="/images/lyriqal-logo.png")
-				li#projects-raffi.project-header.fade
-					a
-						img#projects-raffi-logo(src="/images/raffi-logo.png")
-				li#projects-bushi.project-header.fade
-					a
-						img#projects-bushi-logo(src="/images/logo.png")
+	div#projects-div
+		ul#projects-list
+			li#projects-lyriqal.project-header.fade
+				img#projects-lyriqal-logo(src='/images/lyriqal-logo.png')
+			include /projects/lyriqal
+			li#projects-raffi.project-header.fade
+				img#projects-raffi-logo(src='/images/raffi-logo.png')
+			include /projects/raffi
+			li#projects-bushi.project-header.fade
+				img#projects-bushi-logo(src='/images/logo.png')
