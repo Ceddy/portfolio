@@ -58,7 +58,7 @@ angular.module('myApp.directives', []).
 	directive('resetContent', function() {
 		return function(scope, element, attrs) {
 			var menu = $('#main-navigation');
-			// menu.css('visibility', 'visible');
+			menu.css('visibility', 'visible');
 			// add visible class
 			// menu.css('opacity', 1.0);
 			menu.removeClass('hidden-home');

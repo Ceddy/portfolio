@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'ui']).
-  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  config(['$stateProvider', '$routeProvider', '$locationProvider', function($stateProvider, $routeProvider, $locationProvider) {
     $routeProvider.
         when('/home', {
             templateUrl: 'partials/home',
@@ -25,5 +25,15 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     		controller: resumeCtrl
     	}).
     	otherwise({redirectTo: '/home'});
+    
     $locationProvider.html5Mode(true);
+
+    $stateProvider
+        .state('projects', {
+            url: '/projects'.
+            abstract: true,
+            templateUrl: 'partials/projects',
+            controller: projectsCtrl,
+        })
+        .state('projects.')
   }]);
