@@ -1,12 +1,12 @@
 div#projects-container.content-container(reset-content)
 	div#projects-div
 		ul#projects-list
-			li#projects-lyriqal.project-header.fade(ng-click="show($event)")
-				img#projects-lyriqal-logo(src='/images/lyriqal-logo.png')
-			include /projects/lyriqal
 			li#projects-raffi.project-header.fade(ng-click="show($event)")
 				img#projects-raffi-logo(src='/images/raffi-logo.png')
 			include /projects/raffi
+			li#projects-lyriqal.project-header.fade(ng-click="show($event)")
+				img#projects-lyriqal-logo(src='/images/lyriqal-logo.png')
+			include /projects/lyriqal
 			li#projects-bushi.project-header.fade(ng-click="show($event)")
 				img#projects-bushi-logo(src='/images/logo.png')
 			include /projects/portfolio
