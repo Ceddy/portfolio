@@ -49,6 +49,10 @@ a:hover {
   visibility: hidden;
 }
 
+.display-none {
+  display: none;
+}
+
 /* height stff */
 #body-container {
   height: 100%;
@@ -445,6 +449,7 @@ a:hover {
 
 .project-description p {
   text-align: left;
+  display: inline-block;
 }
 
 /* Contact */
